@@ -9,7 +9,7 @@
     "test": "ng test",
     "dev:ssr": "ng run universal-app-test:serve-ssr",
     "serve:ssr": "node dist/universal-app-test/server/main.js",
-    "build:ssr": "ng build && ng run universal-app-test:server",
+    "build:ssr": "chown -R root:root $BITBUCKET_CLONE_DIR && ng build && ng run universal-app-test:server",
     "prerender": "ng run universal-app-test:prerender"
   },
   "private": true,
