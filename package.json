@@ -12,6 +12,9 @@
     "build:ssr": "ng build && ng run universal-app-test:server",
     "prerender": "ng run universal-app-test:prerender"
   },
+  "bin": {
+    "execute": "dist/universal-app-test/server/main.js"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "^15.0.4",
