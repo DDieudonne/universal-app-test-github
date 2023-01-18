@@ -8,9 +8,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "dev:ssr": "ng run universal-app-test:serve-ssr",
-    "serve:ssr": "sudo node dist/universal-app-test/server/main.js",
-    "build:ssr": "sudo ng build && ng run universal-app-test:server",
-    "prerender": "sudo ng run universal-app-test:prerender"
+    "serve:ssr": "node dist/universal-app-test/server/main.js",
+    "build:ssr": "chown -R $USER /usr/local/lib/node_modules && ng build && ng run universal-app-test:server",
+    "prerender": "chown -R $USER /usr/local/lib/node_modules && ng run universal-app-test:prerender"
   },
   "bin": {
     "execute": "dist/universal-app-test/server/main.js"
